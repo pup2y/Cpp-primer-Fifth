@@ -1,0 +1,17 @@
+ /*
+  * 1.5 sales_item 类
+  * < >标准库  “ ”非标准库
+  */ 
+
+#include <iostream>
+#include "Sales_item.h"
+
+int main() 
+{
+    Sales_item item1, item2; //类 对象名
+
+    std::cin >> item1 >> item2;   //读取一对交易记录
+    std::cout << item1 + item2 << std::endl; //打印两个对象的和
+
+    return 0;
+}
