@@ -1,0 +1,20 @@
+/*
+ * 读取数量不定的输入数据
+ * 使用istream对象作为条件时，检测流的状态
+ * 遇到文件结束符EOF时，对象状态会变为无效
+ * 
+ */ 
+
+#include <iostream> 
+
+int main() 
+{
+	int sum = 0, value = 0;
+
+	// 读取数据直到遇到文件尾，计算所有读入的值的和
+	while (std::cin >> value) 
+		sum += value; // 等于 sum = sum + value
+
+	std::cout << "Sum is: " << sum << std::endl;
+	return 0;
+}
