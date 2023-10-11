@@ -1,0 +1,22 @@
+/*
+ * 控制流
+ * for语句
+ * for(初始化语句；循环条件；循环后执行的表达式)
+ * {
+ * 函数体
+ * }
+ * 一般为固定循环次数
+ */ 
+#include <iostream>
+
+int main()
+{
+    int sum = 0;
+
+    // 从1加到10
+    for (int val = 1; val <= 10; ++val) 
+        sum += val;  // 等于 sum = sum + val
+    std::cout << "Sum of 1 to 10 inclusive is " 
+              << sum << std::endl;
+    return 0;
+}
