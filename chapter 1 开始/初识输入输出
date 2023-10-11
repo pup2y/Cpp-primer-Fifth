@@ -1,0 +1,21 @@
+/*
+ * 初识输入输出
+ * IO库使用
+ * 向IO流读取写入数据
+ * cin可以跳过空格、制表符、换行符等空白字符
+ * endl 换行，结束当前行+刷新缓冲区
+ */ 
+
+#include <iostream>
+
+int main()
+{
+	// 输入两个数写入IO流
+	std::cout << "Enter two numbers:" << std::endl; 
+	int v1 = 0, v2 = 0;
+	std::cin >> v1 >> v2;
+    // 输出两个数之和  
+	std::cout << "The sum of " << v1 << " and " << v2
+	          << " is " << v1 + v2 << std::endl;9 9
+	return 0;
+}
