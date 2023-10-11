@@ -1,0 +1,18 @@
+/*
+ * 控制流extra
+ * for语句
+ * for(初始化语句；循环条件；循环后执行的表达式)
+ * {
+ * 函数体
+ * }
+ */ 
+
+#include <iostream>
+int main()
+{
+	int sum = 0;
+	for (int i = -100; i <= 100; ++i)   //i从-100加到100
+    	sum += i;
+	std::cout << sum << std::endl;// sum为-100到100的总和
+	return 0;
+}
