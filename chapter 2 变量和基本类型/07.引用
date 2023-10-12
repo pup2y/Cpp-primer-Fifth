@@ -1,0 +1,21 @@
+/*
+ * 引用
+ * 为对象起了另外一个名字，仅仅是对象的别名（非对象），没有内存空间
+ */ 
+
+#include <iostream>
+int main()
+{
+	int i = 0, &ri = i;  // ri是i的引用
+	// ri是i的一个别名; 
+	// 语句连续输出两次i的值
+	std::cout << i << " " << ri << std::endl;
+
+	i = 5; // 改变i的值同时也会改变ri
+	std::cout << i << " " << ri << std::endl;
+
+	ri = 10; // 改变ri同时也会改变i
+	std::cout << i << " " << ri << std::endl;
+
+	return 0;
+}
