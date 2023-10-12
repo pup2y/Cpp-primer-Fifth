@@ -1,0 +1,35 @@
+/*
+ * 类型转换
+ * 赋给无符号类型一个超出它表示范围的值后，结果是初始值对无符号类型数值总数取模后的余数
+ * 当前值 = k * 范围总数 + 余数 (mod)  
+ * 赋给有符号类型一个超出它表示范围的值时，结果是未定义的，可能崩溃、继续工作、也可能生成垃圾数据
+ */ 
+
+#include <iostream>
+int main()
+{
+	int i = 42;
+	std::cout << i << std::endl; // 打印 42
+	if (i) // if条件的值为true
+		i = 0;
+	std::cout << i << std::endl; // 打印 0
+
+	bool b = 42;            // b为真——>1  （0为假，其余均为1）
+	std::cout << b << std::endl; // 打印 1
+
+	int j = b;              // 赋值j = 1
+	std::cout << j << std::endl; // 打印 1
+
+	double pi = 3.14;       // pi 的值为 3.14
+	std::cout << pi << std::endl; //打印 3.14
+
+	j = pi;                 // j 的值为 3  （pi隐式转换为int 近似处理，截断小数点后部分）
+	std::cout << j << std::endl; // 打印 3
+
+	unsigned char c = -1;   // char占8bit,表示范围为0-255；
+    //(-1 = -1 * 256 + 255)/(c=-1%256+256) c的值为255 
+	i = c;  
+	std::cout << i << std::endl; // 打印 255
+	
+	return 0;
+}
