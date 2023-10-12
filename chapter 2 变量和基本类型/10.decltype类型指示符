@@ -1,0 +1,35 @@
+/*
+ * auto类型说明符 让编译器去分析表达式所属的类型
+ * decltype选择并返回操作数的数据类型
+ * decltype(表达式)结果永远是引用类型
+ * 
+ * 
+ * 
+ * 
+*/ 
+
+
+
+#include <iostream>
+using std::cout; using std::endl;
+
+int main()
+{
+	int a = 0;
+	decltype(a) c = a;   // c 的类型为int 
+	decltype((a)) d = a; // (a)记作表达式 decltype((a))结果是引用 decltype(*指针p)结果也是引用
+	++c;                 // c自增, a (d) 不变
+	cout << "a: " << a << " c: " << c << " d: " << d << endl;
+	++d;                 // a(d) 自增
+	cout << "a: " << a << " c: " << c << " d: " << d << endl;
+	
+	int A = 0, B = 0;
+	decltype((A)) C = A;   // C是A的引用
+	decltype(A = B) D = A; // D也是A的引用 
+	++C;
+	cout << "A: " << A << " C: " << C << " D: " << D << endl;
+	++D;
+	cout << "A: " << A << " C: " << C << " D: " << D << endl;
+	
+	return 0;
+}
