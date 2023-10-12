@@ -1,0 +1,18 @@
+/*
+ * 转义序列
+ * 
+ * 
+ *
+ * 	
+ */ 
+
+#include <iostream>
+
+int main() {
+	std::cout << '\n';       // 转到新的一行 \n换行符
+	std::cout << "\tHi!\n";  // 输出一个制表符\t, 输出Hi！，转到新的一行
+	std::cout << "Hi \x4dO\115!\n"; // 输出 Hi！ MOM！ （\x4d为十六进制  \115为八进制均指代字符M），换行
+	std::cout << '\115' << '\n';    // 输出M，转到新的一行
+
+	return 0;
+}
