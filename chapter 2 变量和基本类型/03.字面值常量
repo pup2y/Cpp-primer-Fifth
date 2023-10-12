@@ -1,0 +1,28 @@
+/*
+ * 字面值常量
+ * 
+ * 
+ * 
+ */ 
+
+#include <iostream>
+int main() 
+{
+	std::cout << "Hello World!";  // 简单字符串字面值
+	std::cout << "";              // 空字符串字面值
+	// 输出制表符和换行符
+	std::cout << "\nCC\toptions\tfile.[cC]\n";
+
+    // 分多行书写的字符串字面值
+    std::cout << "a really, really long string literal "
+	             "that spans two lines" << std::endl;
+
+	// 3种方式输出M
+	std::cout << 'M' << " " << '\115' << " " << '\x4d' << std::endl;
+
+    unsigned long long bigVal = -1ULL;
+    std::cout << bigVal << std::endl;
+
+    return 0;
+}
+
