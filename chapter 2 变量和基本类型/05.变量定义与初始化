@@ -1,0 +1,25 @@
+/*
+ * 变量初始化
+ * 
+ * 
+ * 
+ */ 
+
+#include "Sales_item.h"
+#include <iostream>
+#include <string>
+
+
+int main() {
+
+	int v1(1024);    // 直接初始化 列表形式 direct-initialization, functional form
+	int v3 = 1024;   // 拷贝初始化 copy-initialization
+
+
+	// 初始化string对象
+	std::string titleA = "C++ Primer, 5th Ed.";
+	std::string titleB("C++ Primer, 5th Ed.");
+	std::string all_nines(10, '9');  // 初始化为连续10个字符9组成的串
+
+	return 0;
+}
