@@ -1,0 +1,33 @@
+/*
+ * 复合类型的声明
+ * 从右向左阅读符号 离变量名最近的符号&对变量的类型最直接的影响
+ *
+ */ 
+
+#include <iostream>
+int main()
+{
+	// i是一个int型的数，p是一个int型指针，r是一个引用
+	int i = 1024, *p = &i, &r = i;
+	
+	// 3种方式输出i的值
+	std::cout << i << " " <<  *p <<  " " << r << std::endl;
+
+	int j = 42, *p2 = &j;//指针p2指向对象j
+	int *&pref = p2;  //pref是指针p2的引用   所以pref是一个引用 引用的类型是指针
+
+	//通过引用pref输出j的值
+	std::cout << *pref << std::endl;
+	
+	// pref作为一个指针; 将i的地址分配给pref
+	pref = &i; 
+	std::cout << *pref << std::endl; // 输出i的值
+
+	// pref（p2）指向int型i   
+	*pref = 0;  // 将i值更改为0
+	
+	std::cout << i << " " << *pref << std::endl;
+
+	return 0;
+}
+	
