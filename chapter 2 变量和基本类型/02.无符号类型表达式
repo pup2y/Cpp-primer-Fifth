@@ -1,0 +1,67 @@
+/*
+ *	无符号类型表达式
+ *	当一个算术表达式中既有无符号又有int值时，int值就会转换成无符号数
+ * 
+ * 
+ */ 
+
+#include <iostream>
+
+int main()
+{
+	unsigned u = 10, u2 = 42;
+	std::cout << u2 - u << std::endl;  
+	std::cout << u - u2 << std::endl;  //unsigned(u - u2)结果为-32，结果不能是一个负值，取模后的结果2^32-32=4294967264
+
+	int i = 10, i2 = 42;
+	std::cout << i2 - i << std::endl;
+	std::cout << i - i2 << std::endl;
+
+	u = 42;
+	i = 10; 
+	std::cout << i - u << std::endl; // int型i转换为unsigned型，计算结果为unsigned型  -32转换为4294967264
+	std::cout << u - i << std::endl; 
+
+	u = 10;
+	i = -42;
+	std::cout << i + i << std::endl;  // 输出 -84
+	std::cout << u + i << std::endl;  // 如果int型为占32位（32-bit）, 输出 2^32-42+10 = 4294967264
+	
+	//倒序输出10-0 while写法 for写法
+	i = 10;
+	std::cout << "good" << std::endl;
+	while (i >= 0) {
+		std::cout << i << std::endl;
+		--i;
+	}
+
+	for (int i = 10; i >= 0; --i)
+		std::cout << i << std::endl;
+
+	for (unsigned u = 0; u <= 10; ++u) 
+		std::cout << u << std::endl;  //正序输出0-10
+
+/* NOTE: 
+	// 错误: 无符号类型u永远不会小于0，循环条件会一直成立
+	for (unsigned u = 10; u >= 0; --u)
+    	std::cout << u << std::endl;
+*/
+	u = 11; // 确定要输出的最大数，从比它大1的数开始
+	while (u > 0) {
+		 --u;        // 自减1，直到最后一次迭代时输出0
+		std::cout << u << std::endl;  
+	}
+
+	// 谨防对比int型和unsigned型
+	u = 10;
+	i = -42;
+	if (i < u)               // 错误: i会转换成unsigned
+		std::cout << i << std::endl;
+	else
+		std::cout << u << std::endl;   // 输出10
+
+	u = 42; u2 = 10;
+	std::cout << u - u2 << std::endl; //输出 32
+	std::cout << u2 - u << std::endl; //结果会是取模后的值
+}
+	
