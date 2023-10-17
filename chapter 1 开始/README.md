@@ -7,8 +7,7 @@
 函数名（function name）  
 参数列表（parameter list，允许为空）   
 函数体（function body）  
-![]([Picture/1.png](https://github.com/pup2y/Cpp-primer-Fifth/blob/main/Picture/1.png)https://github.com/pup2y/Cpp-primer-Fifth/blob/main/Picture/1.png)
-
+![Picture/1.png](https://github.com/pup2y/Cpp-primer-Fifth/blob/main/Picture/1.png)
 
 
 
