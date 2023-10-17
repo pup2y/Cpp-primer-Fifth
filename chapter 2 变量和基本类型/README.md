@@ -35,5 +35,8 @@ unsigned char c=-1;	//假设char占8比特，c的值为255
 signed char c2=256;	//假设char占8比特，c2的值未定义
 ```
 
+## 03.无符号类型表达式
+
+
 
 
