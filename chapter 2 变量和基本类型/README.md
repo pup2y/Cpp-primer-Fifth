@@ -3,7 +3,7 @@
  * C++是一种:blush:静态:blush:数据类型语言，在编译时进行类型检查
  * C++定义了：算术类型、空类型
    
-![](https://github.com/pup2y/Cpp-primer-Fifth/blob/main/Picture/2.png)
+![](https://github.com/pup2y/Cpp-primer-Fifth/blob/main/img/002.png)
 ```diff
 + 计算机以比特序列存储数据，每个比特非0即1,
 + 可寻址的最小内存块称为“字节（byte）”，内存的基本单元称为“字（word）”
@@ -54,6 +54,9 @@ std::cout << u+i << std::endl;//如果int占32位，i转换为2^32-42，输出2^
 "Hello World“ //字符串字面值
 ```
 * 转义序列  
+![](https://github.com/pup2y/Cpp-primer-Fifth/blob/main/img/003.png)
+* 泛化的转义序列，其形式是\x后紧跟1个或多个十六进制的数字，或、后面紧跟1、2或3个八进制的数字。
+![](https://github.com/pup2y/Cpp-primer-Fifth/blob/main/img/004.png)
 
 
 
