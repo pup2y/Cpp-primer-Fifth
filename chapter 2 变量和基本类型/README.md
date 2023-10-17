@@ -16,6 +16,8 @@
  * unsigned int可以缩写成unsigned。
  * char比较特殊，类型分为三种：char、signed char、unsigned char
 
+## 02.类型转换
+
 
 
 
