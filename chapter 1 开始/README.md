@@ -1,4 +1,4 @@
-![image](https://github.com/pup2y/Cpp-primer-Fifth/assets/64685353/18da29b5-8294-4567-8894-94a91aa026e0)# 第一章 开始
+![image](https://github.com/pup2y/Cpp-primer-Fifth/assets/64685353/99906dd3-0ebd-446c-b461-f8c2528a1a73)![image](https://github.com/pup2y/Cpp-primer-Fifth/assets/64685353/35ee2a42-3f4a-4277-9e84-de87f7efa95d)# 第一章 开始
 ## 01.编写一个简单的C++程序
 每个C++程序都包含一个或多个函数（function）,其中一个必须命名为main,一个函数的定义包括：   
   * 返回类型（return type）   
@@ -41,7 +41,7 @@ C++中有两种注释：
 
 ## 03.控制流
 ### while语句
-反复执行一段代码，直至给定条件为假为止。
+ * 反复执行一段代码，直至给定条件为假为止。
 ```cpp
 #include <iostream>
 int main(){
@@ -56,7 +56,7 @@ return 0;
 }
 ```
 ### for语句
- * for语句的出现就是为了简化循环这一过程。
+ * for语句的出现就是为了简化循环这一过程。  
   	结构：初始化语句、循环条件、循环体、表达式
  ```cpp
 #include <iostream>
@@ -71,8 +71,11 @@ return 0;
 }
  ```
 ### if语句
+ * if(循环条件) 表达式
 
-
+## 04.类
+通过类（class）来定义自己的数据结构，一个类定义了一个类型，以及与其相关联的一组操作。     
+成员函数（member function）是定义为类的一部分的函数，有时也被称为方法（method）。    
 
 
 
