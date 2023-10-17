@@ -5,7 +5,9 @@
   * 函数名（function name）  
   * 参数列表（parameter list，允许为空）   
   * 函数体（function body）  
-![Picture/1.png](https://github.com/pup2y/Cpp-primer-Fifth/blob/main/Picture/1.png)
+```c
+int main(int argc, char *argv[]) //C
+```
 
 ## 02.初始输入输出
 iostream库包含两个基础类型istream和ostream。
