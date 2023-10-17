@@ -17,7 +17,7 @@
  * char比较特殊，类型分为三种：char、signed char、unsigned char
 
 ## 02.类型转换
-
+double隐式转换为int————>近似处理，截断小数点后部分  
 
 
 
