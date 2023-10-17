@@ -11,4 +11,13 @@
 1 byte = 8 bit 
 ```
 
+无符号类型  
+ * int、short、long和long long都是带符号的，前面加上unsigned就可以得到无符号类型，例如unsigned long
+ * unsigned int可以缩写成unsigned。
+ * char比较特殊，类型分为三种：char、signed char、unsigned char
+
+
+
+
+
 
