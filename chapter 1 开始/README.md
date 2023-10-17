@@ -52,8 +52,7 @@ int sum = 0, val = 1;
 //只要val的值小于等于10，while循环就会持续执行
 while (val <= 10) {
 sum += val;//复合运算符，将sum+val赋予sum
-++val;//前缀递增运算符，将val加1
-}
+++val;//前缀递增运算符，将val加1  }
 std::cout << "Sum of 1 to 10 includsive is "<< sum << std::endl;
 return 0;
 }
@@ -80,8 +79,7 @@ if (val == currVal)  ++cnt;
 else {
 std::cout << currVal << " occurs "<< cnt << " times" << std::endl;
 currVal = val;//记住新值
-cnt = 1;//重置计数器
-		}
+cnt = 1;//重置计数器  }
 ```
 
 ## 04.类
