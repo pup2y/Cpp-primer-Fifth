@@ -5,8 +5,17 @@
   * 函数名（function name）  
   * 参数列表（parameter list，允许为空）   
   * 函数体（function body）  
-```c
-int main(int argc, char *argv[]) //C
+```cpp
+ * 返回类型 函数名（参数列表）  //Cpp
+ *{
+ *   函数体
+ *                       }
+ */ 
+
+int main() 
+{
+	return 0; 
+}
 ```
 
 ## 02.初始输入输出
