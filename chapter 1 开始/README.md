@@ -11,7 +11,6 @@
  *   函数体
  *                       }
 
-
 int main() 
 {
 	return 0; 
