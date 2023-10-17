@@ -1,4 +1,4 @@
-![image](https://github.com/pup2y/Cpp-primer-Fifth/assets/64685353/99906dd3-0ebd-446c-b461-f8c2528a1a73)![image](https://github.com/pup2y/Cpp-primer-Fifth/assets/64685353/35ee2a42-3f4a-4277-9e84-de87f7efa95d)# 第一章 开始
+# 第一章 开始
 ## 01.编写一个简单的C++程序
 每个C++程序都包含一个或多个函数（function）,其中一个必须命名为main,一个函数的定义包括：   
   * 返回类型（return type）   
