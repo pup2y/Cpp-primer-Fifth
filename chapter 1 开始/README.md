@@ -75,6 +75,14 @@ return 0;
  ```
 ### if语句
  * if(循环条件) 表达式
+```cpp
+if (val == currVal)  ++cnt;
+else {
+std::cout << currVal << " occurs "<< cnt << " times" << std::endl;
+currVal = val;//记住新值
+cnt = 1;//重置计数器
+		}
+```
 
 ## 04.类
 通过类（class）来定义自己的数据结构，一个类定义了一个类型，以及与其相关联的一组操作。     
