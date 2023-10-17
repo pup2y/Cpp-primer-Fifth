@@ -79,11 +79,39 @@ int units_sold(0);
 ### 声明和定义
 声明：声明是用来告诉编译器变量的名称和类型，而不分配内存。   
 定义: 给变量分配内存，可以:kissing:为变量赋初值。  
-* 注：通常变量的定义和声明是同时发生的，注意：extern 变量类型 变量名 仅是声明。
+* 注：通常变量的定义和声明是同时发生的，注意：extern 变量类型 变量名 仅是声明。变量能且只能定义一次，但可以被声明多次。
 ```cpp
-extern int i;//声明i而非定义i
-int j;//声明并定义j
+extern int i;// 声明i而非定义i
+int j;// 声明并定义j
 ```
+### 标识符
+C++标识符（identifier）由字母、数字和下划线组成，其中必须以字母或下划线开头。标识符的长度没有限制，但对大小写敏感。  
+且不能与:sleeping:C++关键词和:sleeping:操作符替代名同名。  
+### 作用域
+* C++中大多数作用域都以花括号分隔。
+* 同一个名字如果出现在程序的不同位置，也可能指向不同的实体。块作用域的局部变量会覆盖掉全局同名变量
+* 名字的有效区域始于名字的声明语句，以声明语句所在的作用域末端为结束。
+```cpp
+#include <iostream>
+int reused = 42;  // reused 拥有全局作用域
+int main()
+{
+int unique = 0; // unique 拥有块作用域
+// output #1: 42 0
+std::cout << reused << " " << unique << std::endl;   
+
+int reused = 0; // 同名的新建局部变量，覆盖了全局变量
+
+// output #2:  0 0
+std::cout << reused << " " <<  unique << std::endl;  
+// output #3: 显式地访问全局变量，打印 42 0
+std::cout << ::reused << " " <<  unique << std::endl;  
+
+return 0;
+}
+```
+
+
 
 
 
