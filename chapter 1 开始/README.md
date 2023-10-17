@@ -30,7 +30,7 @@ iostream库包含两个基础类型istream和ostream。
  * cerr： ostream类型的对象，标准错误（standard error）
  * clog： ostream类型的对象，用来输出程序运行时的一般信息
 
-```shell
+```diff
 cin可以跳过空格、制表符、换行符等空白字符
 ```
 
