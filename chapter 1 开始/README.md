@@ -1,4 +1,4 @@
-# 第一章 开始
+![image](https://github.com/pup2y/Cpp-primer-Fifth/assets/64685353/18da29b5-8294-4567-8894-94a91aa026e0)# 第一章 开始
 ## 01.编写一个简单的C++程序
 每个C++程序都包含一个或多个函数（function）,其中一个必须命名为main,一个函数的定义包括：   
   * 返回类型（return type）   
@@ -32,6 +32,51 @@ iostream库包含两个基础类型istream和ostream。
 ```diff
 cin可以跳过空格、制表符、换行符等空白字符
 ```
+
+## 注释简介
+C++中有两种注释：    
+ * 单行注释  
+ * 界定符对注释  
+   - 不能嵌套
+
+## 03.控制流
+### while语句
+反复执行一段代码，直至给定条件为假为止。
+```cpp
+#include <iostream>
+int main(){
+int sum = 0, val = 1;
+//只要val的值小于等于10，while循环就会持续执行
+while (val <= 10) {
+sum += val;//复合运算符，将sum+val赋予sum
+++val;//前缀递增运算符，将val加1
+}
+std::cout << "Sum of 1 to 10 includsive is "<< sum << std::endl;
+return 0;
+}
+```
+### for语句
+ * for语句的出现就是为了简化循环这一过程。
+  	结构：初始化语句、循环条件、循环体、表达式
+ ```cpp
+#include <iostream>
+int main(){
+int sum = 0;
+
+for (int val = 1; val <= 10;++val) 
+	sum += val;//等价于sum=sum+val
+
+std::cout << "Sum of 1 to 10 includsive is "<< sum << std::endl;
+return 0;
+}
+ ```
+### if语句
+
+
+
+
+
+
 
 
 
