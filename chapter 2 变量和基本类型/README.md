@@ -55,8 +55,14 @@ std::cout << u+i << std::endl;//如果int占32位，i转换为2^32-42，输出2^
 ```
 * 转义序列  
 ![](https://github.com/pup2y/Cpp-primer-Fifth/blob/main/img/003.png)
-* 泛化的转义序列，其形式是\x后紧跟1个或多个十六进制的数字，或、后面紧跟1、2或3个八进制的数字。
+* 泛化的转义序列，其形式是\x后紧跟1个或多个十六进制的数字，或后面紧跟1、2或3个八进制的数字。  
 ![](https://github.com/pup2y/Cpp-primer-Fifth/blob/main/img/004.png)
+
+## 04.变量
+变量：具有类型、具有名称、可操作的存储空间。
+* 类型决定了变量所需要的内存空间、布局方式、以及能够表示值的范围。（对于C++而言，变量（variable）和对象（object）一般是可以互换的。）
+
+
 
 
 
