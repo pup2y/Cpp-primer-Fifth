@@ -1,4 +1,4 @@
-# 第二章 变量和基本类型
+![image](https://github.com/pup2y/Cpp-primer-Fifth/assets/64685353/c9650865-acf5-4abe-b6ed-58096bb429cd)# 第二章 变量和基本类型
 ## 01.基本内置类型
  * C++是一种:blush:**静态**:blush:数据类型语言，在编译时进行类型检查
  * C++定义了：算术类型、空类型
@@ -233,8 +233,8 @@ const double *const pip = &pi;//指向常量的常量指针
 * 顶层const：表示变量本身是一个常量
 * 底层const：表示指针所指向的对象是一个const
 
-底层const可以指向非常量，不能通过其修改非常量
-变量（指针、引用）不可以指向常量，存在通过其修改常量的风险
+底层const可以指向非常量，不能通过其修改非常量   
+变量（指针、引用）不可以指向常量，存在通过其修改常量的风险   
 ```cpp
 int i = 0;
 int *const p1 = &i; //顶层，int指针p1本身是一个常量
@@ -250,6 +250,17 @@ int &r = ci; //错误：存在通过r修改ci（const)的风险
 p2 = &i;  //正确：只是不能通过p2修改i而已
 const int &r2 = i; //正确：只是不能通过r2修改i而已
 ```
+### constexpr和常量表达式
+* 常量表达式（const expression）是指：值不会改变并且在编译过程就能得到计算结果的表达式。
+```cpp
+const int max_files = 20; //是
+const int limit = max_files +1; //是
+int staff_size = 27; //不是,非const
+const int sz = get_size(); //不是，直到运行才能获取计算结果
+```
+* constexpr类型 允许将变量声明为constexpr类型，以便由编译器来验证变量的值是否是一个常量表达式。
+
+
 
 
 
