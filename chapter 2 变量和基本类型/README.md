@@ -36,7 +36,7 @@ signed char c2=256;	//假设char占8比特，c2的值未定义
 ```
 
 ## 03.无符号类型表达式
-* 当一个算术表达式中既有无符号又有int值时，int值就会转换成无符号数 算术表达式的类型为无符号  
+* 当一个算术表达式中既有无符号又有int值时，int值就会转换成无符号数，算术表达式的类型为无符号  
 ```cpp
 unsigned u=10;
 int i=-42;
@@ -50,8 +50,9 @@ std::cout << u+i << std::endl;//如果int占32位，i转换为2^32-42，输出2^
 ```
 * 字符和字符串字面值  
 ```diff
-'a’ //字符字面值
-"Hello World“ //字符串字面值
+//编译时加上一个空字符'\0'，实际长度比显示内容多1
+'a' //字符字面值 
+"Hello World" //字符串字面值
 ```
 * 转义序列  
 ![](https://github.com/pup2y/Cpp-primer-Fifth/blob/main/img/003.png)
@@ -144,7 +145,7 @@ std::cout<<*p ;//输出42
 std::cout<<*p; //输出0
 ```
 ### 空指针
-空指针：不指向任何对象   
+空指针：不指向任何对象 
 ```cpp
 int *p1 = nullptr; //C++11
 int *p2 = 0;
@@ -195,7 +196,7 @@ const的引用————>对常量的引用,**不能被用作修改其绑定�
 const int ci = 1024;
 const int &r1 = ci; //正确：引用及其绑定的对象都是常量
 ```
-* 允许一个常量引用绑定非常量的对象，字面值，或者一般表达式（const int&常量 = 非常量）
+* 允许一个常量引用绑定非常量的对象，字面值，或者一般表达式（const int&常量 = 非常量）    
 * 不能为一个非常量引用绑定一个常量对象———>:scream:**存在通过非常量引用改变常量对象的风险**
 ```cpp
 int i = 42;
@@ -207,11 +208,28 @@ const int &r3 = r1*2;
 int &r4 = r1*2; //错误
 ```   
 ### 指针和const
+1.指向常量的指针（pointer to const）
+```cpp
+//存放常量对象的地址
+const double pi = 3.14;
+const double * cptr = &pi;
+//例外：指向常量的指针允许指向一个非常量对象
+double dval = 3.14;
+cptr = &dval; //正确：但不能通过该指针cptr修改非常量dval的值
+```
+2.常量指针（const指针/const pointer）   
+* 指针本身就是常量，不变的是指针本身的值，而非指向的那个值
+* 把*放在const之前，说明指针是一个常量 (类型 *const)
+```cpp
+int errNumb = 0;
+int *const curErr = &errNumb;  //常量指针
+const double pi = 3.14159;
+const double *const pip = &pi;//指向常量的常量指针
 
-
-
-
-
+*curErr = 0; //正确：可以修改变量errNumb
+*pip = 2.71;//错误：不能通过指向常量的指针pip修改常量pi
+```
+### 顶层const与底层const
 
 
 
