@@ -230,6 +230,28 @@ const double *const pip = &pi;//指向常量的常量指针
 *pip = 2.71;//错误：不能通过指向常量的指针pip修改常量pi
 ```
 ### 顶层const与底层const
+* 顶层const：表示变量本身是一个常量
+* 底层const：表示指针所指向的对象是一个const
+
+底层const可以指向非常量，不能通过其修改非常量
+变量（指针、引用）不可以指向常量，存在通过其修改常量的风险
+```cpp
+int i = 0;
+int *const p1 = &i; //顶层，int指针p1本身是一个常量
+const int ci = 42; //顶层，int变量ci本身是一个常量
+const int *p2 = &ci;//底层，int指针p2指向常量ci
+const int *const p3 = p2;//（左：底层，int指针p3指向p2 ）， （右：顶层，int指针p3本身是一个常量）
+
+i = ci;//正确
+p2 = p3;//正确
+
+int *p = p3;//错误：存在通过*p修改*p3（const）的风险
+int &r = ci; //错误：存在通过r修改ci（const)的风险
+p2 = &i;  //正确：只是不能通过p2修改i而已
+const int &r2 = i; //正确：只是不能通过r2修改i而已
+```
+
+
 
 
 
